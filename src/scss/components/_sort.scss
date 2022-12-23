@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.sort {
+  margin-left: 20px;
+  position: relative;
+  &__label {
+    display: flex;
+    align-items: center;
+
+    b {
+      margin-right: 8px;
+    }
+
+    span {
+      color: $background;
+      border-bottom: 1px solid $background;
+      cursor: pointer;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: rgba(171, 100, 75, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: #000;
+        }
+      }
+    }
+  }
+}

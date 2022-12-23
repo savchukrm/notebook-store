@@ -1,0 +1,20 @@
+.footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.p {
+  padding-left: 10px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.span {
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 20px 10px;
+  }
+}

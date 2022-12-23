@@ -1,0 +1,89 @@
+@import '../variables';
+
+.diary-block {
+  width: 280px;
+  text-align: center;
+  border: 1px solid $light;
+  padding: 20px;
+  margin-bottom: 25px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: $background;
+  }
+
+  &__selector {
+    display: flex;
+    flex-direction: column;
+    color: $light;
+    padding: 3px;
+
+    ul {
+      display: flex;
+      flex: 1;
+      background-color: #fff;
+      border: 1px solid $light;
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        padding: 8px;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        &.active {
+          background: $light;
+          color: #fff;
+          cursor: auto;
+        }
+        &.disabled {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 3px 0;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 21px;
+    color: $background;
+  }
+}
+
+.change-photos {
+  .change-photo {
+    img {
+      height: 290px;
+      object-fit: cover;
+    }
+
+    &:nth-of-type(2) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .change-photo {
+      &:nth-of-type(1) {
+        display: none;
+      }
+
+      &:nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+}
